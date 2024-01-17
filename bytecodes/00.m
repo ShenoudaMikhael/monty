@@ -1,4 +1,4 @@
-push 1n
-push 0
+nop
+push asda
 push 2
 pall
