@@ -15,7 +15,7 @@ void add_dnodeint(stack_t **head, unsigned int n)
 {
 	size_t c = 0, res = 0;
 	stack_t *tmp = malloc(sizeof(stack_t));
-	char *a = NULL, *b;
+	char *a = NULL;
 
 	if (tmp == NULL)
 	{
@@ -44,7 +44,7 @@ void add_dnodeint(stack_t **head, unsigned int n)
 	}
 	if (tmp == NULL)
 		return;
-	tmp->n = strtol(a, &b, 10);
+	tmp->n = ((atoi(a)));
 	tmp->prev = NULL;
 	if (*head == NULL)
 		tmp->next = NULL;
