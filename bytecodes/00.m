@@ -1,5 +1,3 @@
-push 15
-push 2 
-push  3
-asdas
-pall        3   
+push 1
+push 2 sd
+pall  sad      3

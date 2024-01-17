@@ -34,4 +34,7 @@ void add_dnodeint(stack_t **head, unsigned int n);
 void print_dlistint(stack_t **h, unsigned int n);
 char **strtow(char *str);
 
+void free_line(int status, void *argv);
+void free_dlistint(int status, void *head);
+
 #endif

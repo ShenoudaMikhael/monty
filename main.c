@@ -7,6 +7,14 @@
 #include <string.h>
 #include "monty.h"
 
+void closefile(int status, void *f)
+{
+    (void)status;
+
+    if (f != NULL)
+        fclose(f);
+}
+
 void replaceNewlineWithNull(char *str)
 {
     int i;
@@ -23,11 +31,12 @@ int main(int argc, char const **argv)
 {
     int n = 0;
     FILE *fo;
-    char *line, *tok;
+    char *line, *tok = NULL;
     size_t len;
 
     stack_t *stack = NULL;
     /* if no file provided or more than 2 arguments */
+
     if (argc != 2)
     {
         fprintf(stderr, "USAGE: monty file\n");
@@ -41,19 +50,22 @@ int main(int argc, char const **argv)
         fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
         exit(EXIT_FAILURE);
     }
+    on_exit(free_line, &line);
+    on_exit(free_dlistint, &stack);
+    on_exit(closefile, fo);
+    on_exit(free_line, tok);
     /* get file line by line */
     while ((getline(&line, &len, fo)) != -1)
     {
+
         n++;
         tok = strtok(line, "\n\t\r ");
         if (tok != NULL)
         {
+
             do_op(&stack, tok, n);
         }
     }
 
-    fclose(fo);
-    if (line)
-        free(line);
     exit(EXIT_SUCCESS);
 }

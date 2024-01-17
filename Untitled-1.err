@@ -1,0 +1,2 @@
+
+export LD_PRELOAD="/media/shenouda/Data/Data/projects/stderred/build/libstderred.so${LD_PRELOAD:+:$LD_PRELOAD}"
