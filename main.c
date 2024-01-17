@@ -47,17 +47,17 @@ int main(int argc, char const **argv)
     /* if fail to open file */
     if (fo == NULL)
     {
+
         fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
         exit(EXIT_FAILURE);
     }
     on_exit(free_line, &line);
     on_exit(free_dlistint, &stack);
     on_exit(closefile, fo);
-    on_exit(free_line, tok);
     /* get file line by line */
     while ((getline(&line, &len, fo)) != -1)
     {
-
+       
         n++;
         tok = strtok(line, "\n\t\r ");
         if (tok != NULL)

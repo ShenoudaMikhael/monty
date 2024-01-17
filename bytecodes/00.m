@@ -1,3 +1,5 @@
 push 1
-push 2 sd
-pall  sad      3
+push 10
+push 100
+asdas
+pall

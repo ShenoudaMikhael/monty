@@ -8,8 +8,6 @@ void free_line(int status, void *argv)
 
     if (*line != NULL)
     {
-               free(*line);
-
+        free(*line);
     }
-
 }

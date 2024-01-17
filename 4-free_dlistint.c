@@ -2,6 +2,18 @@
 #include <string.h>
 #include <stdio.h>
 #include "monty.h"
+
+void free_stack(stack_t *head)
+{
+	if (head == NULL)
+	{
+		return;
+	}
+
+	free_stack(head->next);
+
+}
+
 /**
  * free_dlistint - free list
  * @head: list
@@ -9,25 +21,9 @@
  */
 void free_dlistint(int status, void *head)
 {
-	stack_t **stack = (stack_t **)head;
-	stack_t *next;
+	stack_t *stack = (stack_t *)head;
 
 	(void)status;
 
-	if (*stack == NULL)
-	{
-		return;
-	}
-
-	if (*stack)
-	{
-		(*stack)->prev->next = NULL;
-		(*stack)->prev = NULL;
-	}
-	while (*stack != NULL)
-	{
-		next = (*stack)->next;
-		free(*stack);
-		*stack = next;
-	}
+	free_stack(stack);
 }
