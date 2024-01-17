@@ -45,7 +45,7 @@ void _nop(stack_t **head, unsigned int n);
 void _pop(stack_t **head, unsigned int n);
 
 char **strtow(char *str);
-
+void free_stack(stack_t *head);
 void free_line(int status, void *argv);
 void free_dlistint(int status, void *head);
 

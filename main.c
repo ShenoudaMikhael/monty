@@ -73,5 +73,7 @@ int main(int argc, char const **argv)
 	}
 	if (line)
 		free(line);
+	if (stack)
+		free_stack(stack);
 	exit(EXIT_SUCCESS);
 }
