@@ -70,8 +70,8 @@ int main(int argc, char const **argv)
 	{
 
 		n++;
-		tok = strtok(line, "\n\t\r ");
-		if (tok != NULL)
+		tok = strtok(line, "\n\t\r " );
+		if (tok != NULL && tok[0] != '#')
 		{
 
 			do_op(&stack, tok, n);
