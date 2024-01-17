@@ -50,19 +50,15 @@ int main(int argc, char const **argv)
 	size_t len;
 
 	stack_t *stack = NULL;
-	/* if no file provided or more than 2 arguments */
 
 	if (argc != 2)
 	{
 		dprintf(STDERR_FILENO, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	/* open file */
 	fo = fopen(argv[1], "r");
-	/* if fail to open file */
 	if (fo == NULL)
 	{
-
 		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
@@ -70,7 +66,6 @@ int main(int argc, char const **argv)
 	on_exit(free_line, &line);
 	on_exit(closefile, fo);
 
-	/* get file line by line */
 	while ((getline(&line, &len, fo)) != -1)
 	{
 
