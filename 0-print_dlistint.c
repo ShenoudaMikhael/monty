@@ -9,19 +9,14 @@
 void print_dlistint(stack_t **h, unsigned int n)
 {
 
-	size_t i = 0;
+	stack_t *current = *h;
 
 	(void)n;
 
-	while (*h != NULL)
+	while (current != NULL)
 	{
-
-		i++;
-		fprintf(stdout, "%d\n", (*h)->n);
-
-		if ((*h)->next == NULL)
-			break;
-		*h = (*h)->next;
+		fprintf(stdout, "%d ", current->n);
+		current = current->next;
 	}
-	return;
+	printf("\n");
 }
