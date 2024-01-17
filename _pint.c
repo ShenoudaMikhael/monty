@@ -7,7 +7,8 @@
  */
 void _pint(stack_t **head, unsigned int n)
 {
-
+	while (strtok(NULL, "\n\t\r "))
+		;
 	if (*head == NULL)
 	{
 		fprintf(stderr, "L%d: can't pint, stack empty\n", n);

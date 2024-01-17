@@ -8,10 +8,13 @@
  */
 void closefile(int status, void *f)
 {
-	(void)status;
+	FILE *fo = (FILE *)f;
 
-	if (f != NULL)
+	(void)status;
+	if (fo != NULL)
 		fclose(f);
+
+	printf("AAA");
 }
 /**
  * replaceNewlineWithNull - remove new line
@@ -39,8 +42,8 @@ void replaceNewlineWithNull(char *str)
 int main(int argc, char const **argv)
 {
 	int n = 0;
-	FILE *fo;
-	char *line, *tok;
+	FILE *fo = NULL;
+	char *line = NULL, *tok = NULL;
 	size_t len;
 
 	stack_t *stack = NULL;
@@ -58,6 +61,8 @@ int main(int argc, char const **argv)
 	}
 
 	on_exit(closefile, fo);
+	on_exit(free_dlistint, &stack);
+	on_exit(free_line, &line);
 
 	while ((getline(&line, &len, fo)) != -1)
 	{
@@ -71,9 +76,6 @@ int main(int argc, char const **argv)
 			do_op(&stack, tok, n);
 		}
 	}
-	if (line)
-		free(line);
-	if (stack)
-		free_stack(stack);
+	
 	exit(EXIT_SUCCESS);
 }

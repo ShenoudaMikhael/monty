@@ -13,6 +13,9 @@ void print_dlistint(stack_t **h, unsigned int n)
 
 	(void)n;
 
+	while (strtok(NULL, "\n\t\r "))
+		;
+
 	while (current != NULL)
 	{
 		printf("%d\n", current->n);

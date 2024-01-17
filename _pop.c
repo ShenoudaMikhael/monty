@@ -69,9 +69,10 @@ int delete_dnodeint_at_index(stack_t **head, unsigned int index)
 
 void _pop(stack_t **head, unsigned int n)
 {
+	
 	if (*head == NULL)
 	{
-		fprintf(stderr, "L%d: can't pop an empty stack\n", n);
+		dprintf(STDERR_FILENO, "L%d: can't pop an empty stack\n", n);
 		exit(EXIT_FAILURE);
 	}
 	delete_dnodeint_at_index(head, 0);

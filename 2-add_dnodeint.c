@@ -45,4 +45,5 @@ void add_dnodeint(stack_t **head, unsigned int n)
 		tmp->next = *head, (*head)->prev = tmp;
 	}
 	*head = tmp;
-}
+	
+}	

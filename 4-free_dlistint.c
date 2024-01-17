@@ -27,18 +27,9 @@ void free_stack(stack_t *head)
 void free_dlistint(int status, void *head)
 {
 
-	stack_t **stack = (stack_t **)head;
-
-	stack_t *current = *stack;
-	stack_t *next_node;
+	stack_t **stack = head;
 
 	(void)status;
+	free_stack(*stack);
 
-
-	while (current != NULL)
-	{
-		next_node = current->next;
-		free(current);
-		current = next_node;
-	}
 }
