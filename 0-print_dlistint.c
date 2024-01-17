@@ -8,7 +8,9 @@
  */
 void print_dlistint(stack_t **h, unsigned int n)
 {
+
 	size_t i = 0;
+
 
 	(void)n;
 

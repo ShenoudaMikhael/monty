@@ -23,14 +23,10 @@ int main(int argc, char const **argv)
 {
     int n = 0;
     FILE *fo;
-    char *line;
+    char *line, *tok;
     size_t len;
-    ssize_t read;
-    instruction_t instruction[] = {
-        {"push", add_dnodeint},
-        {"pall", print_dlistint},
-        {"\0", NULL},
-    };
+
+    stack_t *stack = NULL;
     /* if no file provided or more than 2 arguments */
     if (argc != 2)
     {
@@ -46,28 +42,13 @@ int main(int argc, char const **argv)
         exit(EXIT_FAILURE);
     }
     /* get file line by line */
-    while ((read = getline(&line, &len, fo)) != -1)
+    while ((getline(&line, &len, fo)) != -1)
     {
-        n = 0;
-
-        while (read != -1 && instruction[n].opcode != NULL)
+        n++;
+        tok = strtok(line, "\n\t\r ");
+        if (tok != NULL)
         {
-
-            if (strcmp(instruction[n].opcode, strtok(strdup(line), " \n")) == 0)
-            {
-                printf("%s\n", strtok(NULL, " \n"));
-                n++;
-                continue;
-            }
-            else if (strcmp(instruction[n].opcode, strtok(strdup(line), "\n")) == 0)
-            {
-                printf("%s\n", "AA");
-
-                n++;
-                continue;
-            }
-            printf("NOOOO");
-            exit(EXIT_FAILURE);
+            do_op(&stack, tok, n);
         }
     }
 

@@ -3,6 +3,7 @@
         "*.embeddedhtml": "html",
         "snippets": "plaintext",
         "stddef.h": "c",
-        "monty.h": "c"
+        "monty.h": "c",
+        "stdlib.h": "c"
     }
 }
