@@ -1,5 +1,5 @@
-#include <stdlib.h>
-#include <stdio.h>
+#include "monty.h"
+
 /**
  * word_c - get num of words
  * @s: ptr string

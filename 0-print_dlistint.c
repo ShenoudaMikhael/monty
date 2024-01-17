@@ -1,13 +1,5 @@
-#define _GNU_SOURCE
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <stddef.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include <string.h>
-
 #include "monty.h"
+
 /**
  * print_dlistint - print list with len
  * @h: list to print

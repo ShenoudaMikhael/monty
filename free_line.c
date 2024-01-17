@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "monty.h"
+
 /**
  * free_line - free the readline ptr
  * @status: on exit

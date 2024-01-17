@@ -1,7 +1,5 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "monty.h"
+
 /**
  * free_stack - free the stack ptr
  * @head: stack
