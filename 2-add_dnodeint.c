@@ -15,6 +15,12 @@ void add_dnodeint(stack_t **head, unsigned int n)
 	stack_t *tmp = malloc(sizeof(stack_t));
 	char *a = NULL;
 
+	if (tmp == NULL)
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
+	}
+
 	a = (strtok(NULL, "\n\t\r "));
 	if (a == NULL)
 	{
