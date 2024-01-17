@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <string.h>
+#include <unistd.h>
 #include "monty.h"
 void do_op(stack_t **stack, char *line, int n)
 {
@@ -26,6 +27,6 @@ void do_op(stack_t **stack, char *line, int n)
 
         i++;
     }
-    fprintf(stderr, "L%d: unknown instruction %s\n", n, line);
+    dprintf(STDERR_FILENO, "L%d: unknown instruction %s\n", n, line);
     exit(EXIT_FAILURE);
 }

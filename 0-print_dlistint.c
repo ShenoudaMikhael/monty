@@ -1,5 +1,12 @@
-#include <stddef.h>
+#define _GNU_SOURCE
+
 #include <stdio.h>
+#include <stdlib.h>
+#include <stddef.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <string.h>
+
 #include "monty.h"
 /**
  * print_dlistint - print list with len
@@ -15,7 +22,7 @@ void print_dlistint(stack_t **h, unsigned int n)
 
 	while (current != NULL)
 	{
-		fprintf(stdout, "%d\n", current->n);
+		dprintf(STDERR_FILENO, "%d\n", current->n);
 		current = current->next;
 	}
 }

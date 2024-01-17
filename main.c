@@ -39,7 +39,7 @@ int main(int argc, char const **argv)
 
     if (argc != 2)
     {
-        fprintf(stderr, "USAGE: monty file\n");
+        dprintf(STDERR_FILENO, "USAGE: monty file\n");
         exit(EXIT_FAILURE);
     }
     /* open file */

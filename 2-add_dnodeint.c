@@ -1,7 +1,9 @@
+#define _GNU_SOURCE
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
 #include <ctype.h>
+#include <unistd.h>
 #include "monty.h"
 /**
  * add_dnodeint - add node at the begining
@@ -17,7 +19,7 @@ void add_dnodeint(stack_t **head, unsigned int n)
 
 	if (tmp == NULL)
 	{
-		fprintf(stderr, "Error: malloc failed\n");
+		dprintf(STDERR_FILENO, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
 
@@ -25,7 +27,7 @@ void add_dnodeint(stack_t **head, unsigned int n)
 
 	if (a == NULL)
 	{
-		fprintf(stderr, "L%d: usage: push integer\n", n);
+		dprintf(STDERR_FILENO, "L%d: usage: push integer\n", n);
 		exit(EXIT_FAILURE);
 	}
 
@@ -40,7 +42,7 @@ void add_dnodeint(stack_t **head, unsigned int n)
 	if (res == 0)
 	{
 
-		fprintf(stderr, "L%d: usage: push integer\n", n);
+		dprintf(STDERR_FILENO, "L%d: usage: push integer\n", n);
 		free(tmp);
 		exit(EXIT_FAILURE);
 	}
