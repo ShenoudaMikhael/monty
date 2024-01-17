@@ -48,7 +48,7 @@ int main(int argc, char const **argv)
     if (fo == NULL)
     {
 
-        fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
+        dprintf(STDERR_FILENO, "Error: Can't open file %s\n", argv[1]);
         exit(EXIT_FAILURE);
     }
     on_exit(free_dlistint, &stack);
