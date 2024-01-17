@@ -16,6 +16,12 @@ void add_dnodeint(stack_t **head, unsigned int n)
 	char *a = NULL;
 
 	a = (strtok(NULL, "\n\t\r "));
+	if(a == NULL)
+	{
+		fprintf(stderr, "L%d: usage: push integer\n", n);
+		exit(EXIT_FAILURE);
+	}
+	
 	for (c = 0; c < strlen(a); c++)
 	{
 		res = isdigit(a[c]);
@@ -23,7 +29,7 @@ void add_dnodeint(stack_t **head, unsigned int n)
 			break;
 	}
 
-	if (a == NULL || res == 0)
+	if (res == 0)
 	{
 
 		fprintf(stderr, "L%d: usage: push integer\n", n);
