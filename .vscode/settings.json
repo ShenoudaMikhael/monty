@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "snippets": "plaintext",
+        "stddef.h": "c",
+        "monty.h": "c"
+    }
+}
