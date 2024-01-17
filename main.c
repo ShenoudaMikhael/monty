@@ -42,7 +42,6 @@ int main(int argc, char const **argv)
 	FILE *fo;
 	char *line, *tok;
 	size_t len;
-	stack_t *next_node;
 
 	stack_t *stack = NULL;
 
@@ -58,6 +57,8 @@ int main(int argc, char const **argv)
 		exit(EXIT_FAILURE);
 	}
 
+	on_exit(closefile, fo);
+
 	while ((getline(&line, &len, fo)) != -1)
 	{
 
@@ -70,13 +71,6 @@ int main(int argc, char const **argv)
 			do_op(&stack, tok, n);
 		}
 	}
-	if (fo != NULL)
-		fclose(fo);
-	while (stack != NULL)
-	{
-		next_node = stack->next;
-		free(stack);
-		stack = next_node;
-	}
+
 	exit(EXIT_SUCCESS);
 }
