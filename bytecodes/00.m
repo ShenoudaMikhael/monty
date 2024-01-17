@@ -1,3 +1,4 @@
-push -21
-pall sdfsa
-
+push -1
+push 0
+push 1-
+pall
