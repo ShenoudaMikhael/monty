@@ -71,6 +71,7 @@ int main(int argc, char const **argv)
 			do_op(&stack, tok, n);
 		}
 	}
-
+	if (line)
+		free(line);
 	exit(EXIT_SUCCESS);
 }
