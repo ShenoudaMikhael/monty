@@ -22,7 +22,7 @@ void print_dlistint(stack_t **h, unsigned int n)
 
 	while (current != NULL)
 	{
-		dprintf(STDOUT_FILENO, "%d\n", current->n);
+		printf("%d\n", current->n);
 		current = current->next;
 	}
 }
