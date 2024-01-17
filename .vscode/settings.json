@@ -4,6 +4,7 @@
         "snippets": "plaintext",
         "stddef.h": "c",
         "monty.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "stdio.h": "c"
     }
 }

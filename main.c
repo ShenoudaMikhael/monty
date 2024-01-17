@@ -31,7 +31,7 @@ int main(int argc, char const **argv)
 {
     int n = 0;
     FILE *fo;
-    char *line, *tok = NULL;
+    char *line, *tok;
     size_t len;
 
     stack_t *stack = NULL;
@@ -51,13 +51,14 @@ int main(int argc, char const **argv)
         fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
         exit(EXIT_FAILURE);
     }
-    on_exit(free_line, &line);
     on_exit(free_dlistint, &stack);
+    on_exit(free_line, &line);
     on_exit(closefile, fo);
+
     /* get file line by line */
     while ((getline(&line, &len, fo)) != -1)
     {
-       
+
         n++;
         tok = strtok(line, "\n\t\r ");
         if (tok != NULL)
