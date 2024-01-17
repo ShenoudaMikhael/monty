@@ -11,7 +11,7 @@
  * @status: from on exit
  * @f: file
  * Return: void
-*/
+ */
 void closefile(int status, void *f)
 {
 	(void)status;
@@ -23,7 +23,7 @@ void closefile(int status, void *f)
  * replaceNewlineWithNull - remove new line
  * @str: string
  * Return: Void
-*/
+ */
 void replaceNewlineWithNull(char *str)
 {
 	int i;
@@ -41,7 +41,7 @@ void replaceNewlineWithNull(char *str)
  * @argc: argument count
  * @argv: arguments
  * Return: int
-*/
+ */
 int main(int argc, char const **argv)
 {
 	int n = 0;
@@ -62,15 +62,14 @@ int main(int argc, char const **argv)
 		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	on_exit(free_dlistint, &stack);
-	on_exit(free_line, &line);
+	
 	on_exit(closefile, fo);
 
 	while ((getline(&line, &len, fo)) != -1)
 	{
 
 		n++;
-		tok = strtok(line, "\n\t\r " );
+		tok = strtok(line, "\n\t\r ");
 		if (tok != NULL && tok[0] != '#')
 		{
 
