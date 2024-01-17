@@ -15,8 +15,7 @@ void print_dlistint(stack_t **h, unsigned int n)
 
 	while (current != NULL)
 	{
-		fprintf(stdout, "%d ", current->n);
+		fprintf(stdout, "%d\n", current->n);
 		current = current->next;
 	}
-	printf("\n");
 }
