@@ -31,7 +31,6 @@ void free_dlistint(int status, void *head)
 
 	(void)status;
 
-	printf("%ld\n", sizeof(stack));
 
 	while (current != NULL)
 	{
