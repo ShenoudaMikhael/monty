@@ -17,14 +17,14 @@ void add_dnodeint(stack_t **head, unsigned int n)
 
 	if (tmp == NULL)
 	{
-		fprintf(stderr, "Error: malloc failed\n");
+		dprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
 
 	a = (strtok(NULL, "\n\t\r "));
 	if (a == NULL)
 	{
-		fprintf(stderr, "L%d: usage: push integer\n", n);
+		dprintf(stderr, "L%d: usage: push integer\n", n);
 		exit(EXIT_FAILURE);
 	}
 
@@ -38,7 +38,7 @@ void add_dnodeint(stack_t **head, unsigned int n)
 	if (res == 0)
 	{
 
-		fprintf(stderr, "L%d: usage: push integer\n", n);
+		dprintf(stderr, "L%d: usage: push integer\n", n);
 		exit(EXIT_FAILURE);
 	}
 
