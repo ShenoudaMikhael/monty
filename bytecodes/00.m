@@ -1,6 +1,4 @@
-push                                                            1
-
-
-
-
-pall
+push 1
+push 3
+nop
+pint

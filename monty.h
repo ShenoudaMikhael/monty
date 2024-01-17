@@ -40,6 +40,9 @@ typedef struct instruction_s
 void do_op(stack_t **stack, char *line, int n);
 void add_dnodeint(stack_t **head, unsigned int n);
 void print_dlistint(stack_t **h, unsigned int n);
+void _pint(stack_t **head, unsigned int n);
+void _nop(stack_t **head, unsigned int n);
+
 char **strtow(char *str);
 
 void free_line(int status, void *argv);

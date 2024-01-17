@@ -13,7 +13,8 @@ void do_op(stack_t **stack, char *line, int n)
 	instruction_t instruction[] = {
 		{"push", add_dnodeint},
 		{"pall", print_dlistint},
-		{"pint", print_dlistint},
+		{"pint", _pint},
+		{"nop", _nop},
 		{NULL, NULL},
 	};
 
