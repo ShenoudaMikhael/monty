@@ -2,7 +2,11 @@
 #include <string.h>
 #include <stdio.h>
 #include "monty.h"
-
+/**
+ * free_stack - free the stack ptr
+ * @head: stack
+ * Return: void
+ */
 void free_stack(stack_t *head)
 {
 	stack_t *current = head;
@@ -18,6 +22,7 @@ void free_stack(stack_t *head)
 
 /**
  * free_dlistint - free list
+ * @status: on exit
  * @head: list
  * Return: void
  */

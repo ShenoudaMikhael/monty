@@ -6,67 +6,82 @@
 #include <fcntl.h>
 #include <string.h>
 #include "monty.h"
-
+/**
+ * closefile - close file
+ * @status: from on exit
+ * @f: file
+ * Return: void
+*/
 void closefile(int status, void *f)
 {
-    (void)status;
+	(void)status;
 
-    if (f != NULL)
-        fclose(f);
+	if (f != NULL)
+		fclose(f);
 }
-
+/**
+ * replaceNewlineWithNull - remove new line
+ * @str: string
+ * Return: Void
+*/
 void replaceNewlineWithNull(char *str)
 {
-    int i;
+	int i;
 
-    for (i = 0; str[i] != '\0'; i++)
-    {
-        if (str[i] == '\n')
-        {
-            str[i] = '\0';
-        }
-    }
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] == '\n')
+		{
+			str[i] = '\0';
+		}
+	}
 }
+/**
+ * main - main function
+ * @argc: argument count
+ * @argv: arguments
+ * Return: int
+*/
 int main(int argc, char const **argv)
 {
-    int n = 0;
-    FILE *fo;
-    char *line, *tok;
-    size_t len;
+	int n = 0;
+	FILE *fo;
+	char *line, *tok;
+	size_t len;
 
-    stack_t *stack = NULL;
-    /* if no file provided or more than 2 arguments */
+	stack_t *stack = NULL;
+	/* if no file provided or more than 2 arguments */
 
-    if (argc != 2)
-    {
-        dprintf(STDERR_FILENO, "USAGE: monty file\n");
-        exit(EXIT_FAILURE);
-    }
-    /* open file */
-    fo = fopen(argv[1], "r");
-    /* if fail to open file */
-    if (fo == NULL)
-    {
+	if (argc != 2)
+	{
+		dprintf(STDERR_FILENO, "USAGE: monty file\n");
+		exit(EXIT_FAILURE);
+	}
+	/* open file */
+	fo = fopen(argv[1], "r");
+	/* if fail to open file */
+	if (fo == NULL)
+	{
 
-        dprintf(STDERR_FILENO, "Error: Can't open file %s\n", argv[1]);
-        exit(EXIT_FAILURE);
-    }
-    on_exit(free_dlistint, &stack);
-    on_exit(free_line, &line);
-    on_exit(closefile, fo);
+		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", argv[1]);
+		exit(EXIT_FAILURE);
+	}
+	on_exit(free_dlistint, &stack);
+	on_exit(free_line, &line);
+	on_exit(closefile, fo);
 
-    /* get file line by line */
-    while ((getline(&line, &len, fo)) != -1)
-    {
+	/* get file line by line */
+	while ((getline(&line, &len, fo)) != -1)
+	{
 
-        n++;
-        tok = strtok(line, "\n\t\r ");
-        if (tok != NULL)
-        {
+		n++;
+		tok = strtok(line, "\n\t\r ");
+		if (tok != NULL)
+		{
 
-            do_op(&stack, tok, n);
-        }
-    }
+			do_op(&stack, tok, n);
+		}
+	}
 
-    exit(EXIT_SUCCESS);
+	exit(EXIT_SUCCESS);
 }

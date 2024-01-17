@@ -11,6 +11,7 @@
 /**
  * print_dlistint - print list with len
  * @h: list to print
+ * @n: line number
  * Return: list length
  */
 void print_dlistint(stack_t **h, unsigned int n)
