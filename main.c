@@ -57,7 +57,6 @@ int main(int argc, char const **argv)
 		exit(EXIT_FAILURE);
 	}
 
-	on_exit(closefile, fo);
 
 	while ((getline(&line, &len, fo)) != -1)
 	{
@@ -71,6 +70,7 @@ int main(int argc, char const **argv)
 			do_op(&stack, tok, n);
 		}
 	}
-
+	if (fo != NULL)
+		fclose(fo);
 	exit(EXIT_SUCCESS);
 }
