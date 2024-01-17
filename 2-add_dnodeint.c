@@ -13,10 +13,9 @@
  */
 void add_dnodeint(stack_t **head, unsigned int n)
 {
-	size_t c = 0, res = 0;
+	size_t c = 0;
 	stack_t *tmp = malloc(sizeof(stack_t));
-	char *a = NULL, *b;
-	long int num;
+	char *a = NULL;
 
 	if (tmp == NULL)
 	{
@@ -31,23 +30,18 @@ void add_dnodeint(stack_t **head, unsigned int n)
 	}
 	for (c = 0; c < strlen(a); c++)
 	{
-		if (a[c] == '-')
+		if (a[c] == '-' && c == 0)
 			continue;
-		res = isdigit(a[c]);
-		if (res == 0)
-			break;
-	}
-	num = strtol(a, &b, 10);
-	if (res == 0 || *b != '\0')
-	{
-		dprintf(STDERR_FILENO, "L%d: usage: push integer\n", n);
-		free(tmp);
-		exit(EXIT_FAILURE);
+		if (isdigit(a[c]) == 0)
+		{
+			dprintf(STDERR_FILENO, "L%d: usage: push integer\n", n);
+			exit(EXIT_FAILURE);
+		}
 	}
 
 	if (tmp == NULL)
 		return;
-	tmp->n = num;
+	tmp->n = atoi(a);
 	tmp->prev = NULL;
 	if (*head == NULL)
 		tmp->next = NULL;
