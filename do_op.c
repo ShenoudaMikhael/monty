@@ -15,6 +15,7 @@ void do_op(stack_t **stack, char *line, int n)
 		{"pall", print_dlistint},
 		{"pint", _pint},
 		{"nop", _nop},
+		{"pop", _pop},
 		{NULL, NULL},
 	};
 
