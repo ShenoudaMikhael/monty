@@ -25,6 +25,7 @@ void do_op(stack_t **stack, char *line, int n)
 		{"pchar", _pchar},
 		{"pstr", _pstr},
 		{"rotl", _rotl},
+		{"rotr", _rotr},
 		{NULL, NULL},
 	};
 
