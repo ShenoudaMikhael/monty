@@ -22,6 +22,7 @@ void do_op(stack_t **stack, char *line, int n)
 		{"mul", _mul},
 		{"div", _div},
 		{"mod", _mod},
+		{"pchar", _pchar},
 		{NULL, NULL},
 	};
 
