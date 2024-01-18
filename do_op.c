@@ -21,6 +21,7 @@ void do_op(stack_t **stack, char *line, int n)
 		{"sub", _sub},
 		{"mul", _mul},
 		{"div", _div},
+		{"mod", _mod},
 		{NULL, NULL},
 	};
 
