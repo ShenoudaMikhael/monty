@@ -11,7 +11,7 @@ void _mod(stack_t **head, unsigned int n)
 	stack_t *zero = NULL, *one = NULL;
 	int mod;
 
-	if (*head == NULL || (*head)->next == NULL)
+	if (head == NULL || *head == NULL || (*head)->next == NULL)
 	{
 		dprintf(STDERR_FILENO, "L%d: can't mod, stack too short\n", n);
 		exit(EXIT_FAILURE);
