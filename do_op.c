@@ -1,12 +1,23 @@
-
 #include "monty.h"
-
+/**
+ * _stack - stack function
+ * @head: head
+ * @n: line number
+ * Return: Void
+*/
 void _stack(stack_t **head, unsigned int n)
 {
 	(void)head;
 	(void)n;
 	is.stack = 1;
 }
+
+/**
+ * _queue - queue function
+ * @head: head
+ * @n: line number
+ * Return: Void
+*/
 void _queue(stack_t **head, unsigned int n)
 {
 	(void)head;
