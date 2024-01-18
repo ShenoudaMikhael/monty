@@ -1,8 +1,7 @@
 #include "monty.h"
 /**
- * print_dlistint - print list with len
+ * _print_rev - print list rev
  * @h: list to print
- * @n: line number
  * Return: list length
  */
 void _print_rev(stack_t *h)
@@ -14,8 +13,6 @@ void _print_rev(stack_t *h)
 
 		_print_rev((h)->next);
 	}
-
-	return;
 }
 
 /**
@@ -31,12 +28,11 @@ void print_dlistint(stack_t **h, unsigned int n)
 
 	(void)n;
 
-	 
+
 
 		while (current != NULL)
 		{
 			fprintf(stdout, "%d\n", current->n);
 			current = current->next;
 		}
-	 
 }
