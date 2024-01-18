@@ -68,11 +68,13 @@ int main(int argc, char const **argv)
 		n++;
 		tok = strtok(line, "\n\t\r ");
 
-		if (tok != NULL && tok[0] != '#')
+		if (tok != NULL)
 		{
 
 			do_op(&stack, tok, n);
 		}
+		if (tok[0] != '#')
+		continue;
 	}
 
 	exit(EXIT_SUCCESS);
