@@ -7,21 +7,21 @@
  */
 void _pstr(stack_t **head, unsigned int n)
 {
-    stack_t *tmp = *head;
+	stack_t *tmp = *head;
 
-    (void)n;
+	(void)n;
 
-    while (tmp != NULL)
-    {
-        if ((tmp->n >= 65 && tmp->n <= 90) || (tmp->n >= 97 && tmp->n <= 122))
-        {
-            printf("%c", tmp->n);
-        }
-        else
-        {
-            break;
-        }
-        tmp = tmp->next;
-    }
-    printf("\n");
+	while (tmp != NULL)
+	{
+		if ((tmp->n >= 65 && tmp->n <= 90) || (tmp->n >= 97 && tmp->n <= 122))
+		{
+			printf("%c", tmp->n);
+		}
+		else
+		{
+			break;
+		}
+		tmp = tmp->next;
+	}
+	printf("\n");
 }
