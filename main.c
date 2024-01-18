@@ -73,8 +73,10 @@ int main(int argc, char const **argv)
 
 			do_op(&stack, tok, n);
 		}
-		if (tok[0] != '#')
-		continue;
+		if (tok[0] == '#')
+		{
+			continue;
+		}
 	}
 
 	exit(EXIT_SUCCESS);
