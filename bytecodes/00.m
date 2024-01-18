@@ -6,23 +6,4 @@ push 18
 push 18
 push 18
 push 18
-push 18
-push 18
-push 18
-push 18
-push 18
-push 18
-push 18
-push 18
-push 18
-push 18
-push 18
-push 18
-push 18
-push 18
-push 18
-push 18
-push 18
-push 18
-push 19
-push 12
+pall

@@ -14,7 +14,6 @@ void closefile(int status, void *f)
 	if (fo != NULL)
 		fclose(f);
 
-	printf("AAA");
 }
 /**
  * replaceNewlineWithNull - remove new line
