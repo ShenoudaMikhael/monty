@@ -55,6 +55,8 @@ void _pop(stack_t **head, unsigned int n);
 void _add(stack_t **head, unsigned int n);
 void _swap(stack_t **head, unsigned int n);
 void _sub(stack_t **head, unsigned int n);
+void _div(stack_t **head, unsigned int n);
+void _mul(stack_t **head, unsigned int n);
 
 char **strtow(char *str);
 void free_stack(stack_t *head);
