@@ -16,6 +16,7 @@ void do_op(stack_t **stack, char *line, int n)
 		{"pint", _pint},
 		{"nop", _nop},
 		{"pop", _pop},
+		{"add", _add},
 		{NULL, NULL},
 	};
 

@@ -1,9 +1,6 @@
 push 1
-push 132
-push 15
-push 15
-push 18
-push 18
-push 18
-push 18
+push 2
+push 3
+pall
+add
 pall

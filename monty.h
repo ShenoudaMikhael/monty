@@ -44,7 +44,6 @@ typedef struct gvar_s
     stack_t *stack;
 } gvar_t;
 
-
 extern gvar_t gvar;
 
 void do_op(stack_t **stack, char *line, int n);
@@ -53,10 +52,15 @@ void print_dlistint(stack_t **h, unsigned int n);
 void _pint(stack_t **head, unsigned int n);
 void _nop(stack_t **head, unsigned int n);
 void _pop(stack_t **head, unsigned int n);
+void _add(stack_t **head, unsigned int n);
 
 char **strtow(char *str);
 void free_stack(stack_t *head);
 void free_line(int status, void *argv);
 void free_dlistint(int status, void *head);
+
+stack_t *get_mydnodeint_at_index(
+    stack_t *head, unsigned int index, unsigned int *i);
+int delete_dnodeint_at_index(stack_t **head, unsigned int index);
 
 #endif
