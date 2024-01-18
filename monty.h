@@ -40,11 +40,10 @@ typedef struct instruction_s
 
 typedef struct gvar_s
 {
-    char *line;
-    stack_t *stack;
+    int stack;
 } gvar_t;
 
-extern gvar_t gvar;
+extern gvar_t is;
 
 void do_op(stack_t **stack, char *line, int n);
 void add_dnodeint(stack_t **head, unsigned int n);

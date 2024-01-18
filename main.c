@@ -1,5 +1,6 @@
 
 #include "monty.h"
+gvar_t is;
 /**
  * closefile - close file
  * @status: from on exit
@@ -43,8 +44,9 @@ int main(int argc, char const **argv)
 	FILE *fo = NULL;
 	char *line = NULL, *tok = NULL;
 	size_t len;
-
 	stack_t *stack = NULL;
+
+	is.stack = 1;
 
 	if (argc != 2)
 	{

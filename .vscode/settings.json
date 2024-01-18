@@ -5,6 +5,7 @@
         "stddef.h": "c",
         "monty.h": "c",
         "stdlib.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "cstdlib": "c"
     }
 }

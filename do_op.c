@@ -1,5 +1,19 @@
 
 #include "monty.h"
+
+void _stack(stack_t **head, unsigned int n)
+{
+	(void)head;
+	(void)n;
+	is.stack = 1;
+}
+void _queue(stack_t **head, unsigned int n)
+{
+	(void)head;
+	(void)n;
+	is.stack = 0;
+}
+
 /**
  * do_op - compare token to operation
  * @stack: stack
@@ -26,6 +40,8 @@ void do_op(stack_t **stack, char *line, int n)
 		{"pstr", _pstr},
 		{"rotl", _rotl},
 		{"rotr", _rotr},
+		{"stack", _stack},
+		{"queue", _queue},
 		{NULL, NULL},
 	};
 

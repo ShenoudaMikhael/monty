@@ -9,14 +9,9 @@
 void add_dnodeint(stack_t **head, unsigned int n)
 {
 	size_t c = 0;
-	stack_t *tmp = malloc(sizeof(stack_t));
+	stack_t *tmp = NULL;
 	char *a = NULL;
 
-	if (tmp == NULL)
-	{
-		dprintf(STDERR_FILENO, "Error: malloc failed\n");
-		exit(EXIT_FAILURE);
-	}
 	a = strtok(NULL, "\n\t\r ");
 	if (a == NULL)
 	{
@@ -34,15 +29,27 @@ void add_dnodeint(stack_t **head, unsigned int n)
 		}
 	}
 
-	if (tmp == NULL)
-		return;
-	tmp->n = atoi(a);
-	tmp->prev = NULL;
-	if (*head == NULL)
-		tmp->next = NULL;
+	if (is.stack == 1)
+	{
+		tmp = malloc(sizeof(stack_t));
+		if (tmp == NULL)
+		{
+			dprintf(STDERR_FILENO, "Error: malloc failed\n");
+			exit(EXIT_FAILURE);
+		}
+		tmp->n = atoi(a);
+		tmp->prev = NULL;
+		if (*head == NULL)
+			tmp->next = NULL;
+		else
+		{
+			tmp->next = *head, (*head)->prev = tmp;
+		}
+		*head = tmp;
+	}
 	else
 	{
-		tmp->next = *head, (*head)->prev = tmp;
+		free(tmp);
+		add_dnodeint_end(head, atoi(a));
 	}
-	*head = tmp;
 }
