@@ -60,6 +60,7 @@ void _mul(stack_t **head, unsigned int n);
 void _mod(stack_t **head, unsigned int n);
 void _pchar(stack_t **head, unsigned int n);
 void _pstr(stack_t **head, unsigned int n);
+void _rotl(stack_t **head, unsigned int n);
 
 char **strtow(char *str);
 void free_stack(stack_t *head);
@@ -70,6 +71,7 @@ stack_t *get_mydnodeint_at_index(
     stack_t *head, unsigned int index, unsigned int *i);
 stack_t *get_dnodeint_at_index(stack_t *head, unsigned int index);
 stack_t *add_dnodeinttop(stack_t **head, const int n);
+stack_t *add_dnodeint_end(stack_t **head, const int n);
 
 int delete_dnodeint_at_index(stack_t **head, unsigned int index);
 
