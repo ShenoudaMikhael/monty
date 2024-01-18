@@ -28,23 +28,19 @@ void add_dnodeint(stack_t **head, unsigned int n)
 			exit(EXIT_FAILURE);
 		}
 	}
-
 	if (is.stack == 1)
 	{
 		tmp = malloc(sizeof(stack_t));
 		if (tmp == NULL)
 		{
-			dprintf(STDERR_FILENO, "Error: malloc failed\n");
-			exit(EXIT_FAILURE);
+			dprintf(STDERR_FILENO, "Error: malloc failed\n"), exit(EXIT_FAILURE);
 		}
 		tmp->n = atoi(a);
 		tmp->prev = NULL;
 		if (*head == NULL)
 			tmp->next = NULL;
 		else
-		{
 			tmp->next = *head, (*head)->prev = tmp;
-		}
 		*head = tmp;
 	}
 	else
