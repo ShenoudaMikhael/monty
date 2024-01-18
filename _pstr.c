@@ -8,10 +8,17 @@
 void _pstr(stack_t **head, unsigned int n)
 {
     (void)n;
+    if (head == NULL || *head == NULL)
+	{
+		printf("\n");
+	}
     while (*head != NULL)
     {
         if ((*head)->next == NULL || (*head)->n == 0 || ((*head)->n < 0 || (*head)->n > 127))
+        {
             break;
+		    printf("\n");
+        }
         else
         {
             printf("%c", (*head)->n);
