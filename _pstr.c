@@ -8,7 +8,7 @@
 void _pstr(stack_t **head, unsigned int n)
 {
     (void)n;
-    while (head != NULL)
+    while (*head != NULL)
     {
         if ((*head)->next == NULL || (*head)->n == 0 || ((*head)->n < 0 || (*head)->n > 127))
             break;
