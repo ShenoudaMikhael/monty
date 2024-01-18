@@ -59,6 +59,7 @@ void _div(stack_t **head, unsigned int n);
 void _mul(stack_t **head, unsigned int n);
 void _mod(stack_t **head, unsigned int n);
 void _pchar(stack_t **head, unsigned int n);
+void _pstr(stack_t **head, unsigned int n);
 
 char **strtow(char *str);
 void free_stack(stack_t *head);
