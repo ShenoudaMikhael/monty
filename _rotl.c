@@ -7,5 +7,6 @@
 */
 void _rotl(stack_t **head, unsigned int n)
 {
-    
+    (void)head;
+    (void)n;
 }
