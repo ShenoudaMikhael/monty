@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * nop - no operation
+ * _nop - no operation
  * @head: list
  * @n: line number
  * Return: Void

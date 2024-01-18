@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * pint - print list head
+ * _pint - print list head
  * @head: list head
  * @n: current line
  *

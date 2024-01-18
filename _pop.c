@@ -66,10 +66,15 @@ int delete_dnodeint_at_index(stack_t **head, unsigned int index)
 
 	return (-1);
 }
-
+/**
+ * _pop - remove top item
+ * @head: list
+ * @n: line number
+ * Return: void
+*/
 void _pop(stack_t **head, unsigned int n)
 {
-	
+
 	if (*head == NULL)
 	{
 		dprintf(STDERR_FILENO, "L%d: can't pop an empty stack\n", n);

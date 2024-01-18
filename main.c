@@ -13,7 +13,6 @@ void closefile(int status, void *f)
 	(void)status;
 	if (fo != NULL)
 		fclose(f);
-
 }
 /**
  * replaceNewlineWithNull - remove new line
@@ -75,6 +74,6 @@ int main(int argc, char const **argv)
 			do_op(&stack, tok, n);
 		}
 	}
-	
+
 	exit(EXIT_SUCCESS);
 }
