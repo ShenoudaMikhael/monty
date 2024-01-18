@@ -53,6 +53,7 @@ void _pint(stack_t **head, unsigned int n);
 void _nop(stack_t **head, unsigned int n);
 void _pop(stack_t **head, unsigned int n);
 void _add(stack_t **head, unsigned int n);
+void _swap(stack_t **head, unsigned int n);
 
 char **strtow(char *str);
 void free_stack(stack_t *head);
@@ -61,6 +62,8 @@ void free_dlistint(int status, void *head);
 
 stack_t *get_mydnodeint_at_index(
     stack_t *head, unsigned int index, unsigned int *i);
+stack_t *get_dnodeint_at_index(stack_t *head, unsigned int index);
+
 int delete_dnodeint_at_index(stack_t **head, unsigned int index);
 
 #endif

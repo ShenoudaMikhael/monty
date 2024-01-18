@@ -17,6 +17,7 @@ void do_op(stack_t **stack, char *line, int n)
 		{"nop", _nop},
 		{"pop", _pop},
 		{"add", _add},
+		{"swap", _swap},
 		{NULL, NULL},
 	};
 
@@ -26,7 +27,7 @@ void do_op(stack_t **stack, char *line, int n)
 		{
 
 			instruction[i].f(stack, n);
-			
+
 			return;
 		}
 
