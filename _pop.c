@@ -27,6 +27,7 @@ stack_t *get_mydnodeint_at_index(
 	}
 	return (NULL);
 }
+
 /**
  * delete_dnodeint_at_index - delete at index
  * @head: list
@@ -74,7 +75,6 @@ int delete_dnodeint_at_index(stack_t **head, unsigned int index)
 */
 void _pop(stack_t **head, unsigned int n)
 {
-
 	if (*head == NULL)
 	{
 		dprintf(STDERR_FILENO, "L%d: can't pop an empty stack\n", n);
