@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * _rotl - rotates the stack to the top
+ * _rotl - rotates the stack to the top rev
  * @head: head
  * @n: line number
  * Return: Void
