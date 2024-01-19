@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * _sub - sub top two nodes ad set to ndex 0
+ * _sub - sub top two nodes and set to index 0
  * @head: head
  * @n: line number
  * Return: Void
