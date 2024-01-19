@@ -16,7 +16,7 @@ void _print_rev(stack_t *h)
 }
 
 /**
- * print_dlistint - print list with len
+ * print_dlistint - print list with length
  * @h: list to print
  * @n: line number
  * Return: list length
