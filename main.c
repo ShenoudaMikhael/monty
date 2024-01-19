@@ -1,4 +1,3 @@
-
 #include "monty.h"
 gvar_t is;
 /**
@@ -15,6 +14,7 @@ void closefile(int status, void *f)
 	if (fo != NULL)
 		fclose(f);
 }
+
 /**
  * replaceNewlineWithNull - remove new line
  * @str: string
@@ -32,6 +32,7 @@ void replaceNewlineWithNull(char *str)
 		}
 	}
 }
+
 /**
  * main - main function
  * @argc: argument count
@@ -76,6 +77,5 @@ int main(int argc, char const **argv)
 			do_op(&stack, tok, n);
 		}
 	}
-
 	exit(EXIT_SUCCESS);
 }
