@@ -1,9 +1,9 @@
 #include "monty.h"
 /**
- * get_dnodeint_at_index - get node at index
+ * get_dnodeint_at_index - get node at specific index
  * @head: list head
  * @index: list index
- * Return: node or null
+ * Return: value of a node or null
  */
 stack_t *get_dnodeint_at_index(stack_t *head, unsigned int index)
 {
