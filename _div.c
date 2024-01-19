@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * _div - div top two nodes ad set to ndex 0
+ * _div - div top two nodes and set to index 0
  * @head: head
  * @n: line number
  * Return: Void
