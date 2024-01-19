@@ -1,8 +1,10 @@
 #include "monty.h"
+
 /**
- * _swap - swap first 2
+ * _swap - swap first 2 elements
  * @head: list
  * @n: line nummber
+ * Return: Void
  */
 void _swap(stack_t **head, unsigned int n)
 {
