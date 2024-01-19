@@ -1,5 +1,4 @@
 #include "monty.h"
-
 /**
  * _swap - swap first 2 elements
  * @head: list
