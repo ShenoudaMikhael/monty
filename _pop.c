@@ -10,7 +10,6 @@
 stack_t *get_mydnodeint_at_index(
 	stack_t *head, unsigned int index, unsigned int *i)
 {
-
 	if (head == NULL)
 		return (NULL);
 

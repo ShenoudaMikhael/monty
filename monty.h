@@ -69,7 +69,7 @@ void free_line(int status, void *argv);
 void free_dlistint(int status, void *head);
 
 stack_t *get_mydnodeint_at_index(
-stack_t *head, unsigned int index, unsigned int *i);
+    stack_t *head, unsigned int index, unsigned int *i);
 stack_t *get_dnodeint_at_index(stack_t *head, unsigned int index);
 stack_t *add_dnodeinttop(stack_t **head, const int n);
 stack_t *add_dnodeint_end(stack_t **head, const int n);
