@@ -19,7 +19,7 @@ void _print_rev(stack_t *h)
  * print_dlistint - print list with length
  * @h: list to print
  * @n: line number
- * Return: list length
+ * Return: Void
  */
 void print_dlistint(stack_t **h, unsigned int n)
 {
