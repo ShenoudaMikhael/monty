@@ -3,7 +3,7 @@
  * add_dnodeint - add node at the begining
  * @head: dlist
  * @n: number
- * Return: address or Null
+ * Return: Void
  */
 void add_dnodeint(stack_t **head, unsigned int n)
 {
