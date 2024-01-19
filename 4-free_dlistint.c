@@ -26,10 +26,8 @@ void free_stack(stack_t *head)
  */
 void free_dlistint(int status, void *head)
 {
-
 	stack_t **stack = head;
 
 	(void)status;
 	free_stack(*stack);
-
 }
