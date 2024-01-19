@@ -1,5 +1,4 @@
 #include "monty.h"
-
 /**
  * _div - div top two nodes and set to index 0
  * @head: head

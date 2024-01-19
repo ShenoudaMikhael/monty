@@ -1,5 +1,4 @@
 #include "monty.h"
-
 /**
  * _pint - print list head
  * @head: list head

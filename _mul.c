@@ -1,5 +1,4 @@
 #include "monty.h"
-
 /**
  * _mul - mul top two nodes ad set to ndex 0
  * @head: head

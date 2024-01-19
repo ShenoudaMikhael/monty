@@ -1,5 +1,4 @@
 #include "monty.h"
-
 /**
  * _pchar - prints the char at the top of the stack
  * @head: head
