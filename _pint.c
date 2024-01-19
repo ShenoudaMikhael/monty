@@ -3,7 +3,7 @@
  * _pint - print list head
  * @head: list head
  * @n: current line
- *
+ * Return: Void
  */
 void _pint(stack_t **head, unsigned int n)
 {
