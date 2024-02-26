@@ -13,4 +13,4 @@ int main(int argc, char const **argv);
 ## Authors
 
 - [@Shenouda Mikhael](https://github.com/shenoudaMikhael)
-- [@Salsabil Ahamed](https://github.com/salsapil)
+- [@Salsabil Ahmed](https://github.com/salsapil)
